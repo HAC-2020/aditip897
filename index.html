@@ -76,7 +76,6 @@
   
 }
 
-/* Add a black background color to the top navigation */
 .nav {
   background-color: #111E6C;
   overflow: hidden;
@@ -87,8 +86,12 @@
   color: black;
 }
 
+.nav a.active {
+  background-color: teal;
+  color: white;
+}
 
-/* Style the links inside the navigation bar */
+
 .nav a {
   float: left;
   color: #f2f2f2;
@@ -99,22 +102,13 @@
   font-family: 'Mulish', sans-serif;
 }
 
-/* Change the color of links on hover */
-
-/* Add a color to the active/current link */
-.nav a.active {
-  background-color: teal;
-  color: white;
-}
-
-
 </style>
     <title>COVID-Protect</title>
   </head>
 
   <body>
     <div class="nav">
-      <a class="active" href="#index.html">Home Page</a>
+      <a class="active" href="index.html">Home Page</a>
       <a href="input.html">Input Place</a>
       <a href="livestats.html">Live Stats</a>
       <a href="educate.html">Educate Yourself</a>
