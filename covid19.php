@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="jumbotron text-center">
-    <h1>Want to travel to another state ? Check Below to see if it's safe</h1>
+    <h1>Want to travel to another state? Check Below to see if it's safe</h1>
     
     
     </div>
