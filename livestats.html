@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/5hVj6c9/0f1844f4-a6f3-4dce-9b96-5da30ae63489-200x200.png"  />
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Freckle+Face|Lacquer|Mirza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Recursive:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Live COVID-19 Stats</h1>
+        <br><br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Total Cases</th>
+                <th scope="col">Total Deaths</th>
+                <th scope="col">Total Recovered</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="data">
+
+
+              </tr>
+              
+            </tbody>
+          </table>
+          <br>
+          <button onclick="refreshData()" class="btn btn-danger btn-block">
+            Refresh Data
+          </button>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+        init()
+
+
+        function init(){
+            var url = "https://api.covid19api.com/summary"
+            var data = ''
+
+            $.get(url,function(data){
+                console.log(data.Global)
+
+                data = `
+
+              <td>${data.Global.TotalConfirmed}</td>
+              <td>${data.Global.TotalDeaths}</td>
+              <td>${data.Global.TotalRecovered}</td>
+
+
+
+                `
+
+                $("#data").html(data)
+            })
+
+        }
+
+        function refreshData(){
+          clearData()
+          init()
+        }
+
+        function clearData(){
+          $("#data").empty()
+          
+        }
+
+</script>
+
+
+</html>
