@@ -71,8 +71,37 @@
         font-family: 'Mulish', sans-serif;
         }
 
-    
-        </style>
+        #precautionheader { 
+            font-family: 'Recursive', sans-serif;
+            color: #EA3C53;
+            font-size:50px;
+        }
+
+        #precautionbullet { 
+            
+             
+            font-family: 'Recursive', sans-serif;
+            color: yellow;
+            font-size:25px;
+        }
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+        .img { 
+            height: 200px;
+        }
+
+</style>
+
     <title>COVID-Protect</title>
 
   </head>
@@ -87,6 +116,8 @@
         <a href="input.html">Input Place</a>
         <a href="livestats.html">Live Stats</a>
         <a class="active" href="educate.html">Educate Yourself</a>
+        <a href = "#reviews.html">Add a Review</a>
+
       </div>
      
 
@@ -114,10 +145,40 @@
         <p id = "sources">We got the above diagrams from the following source: https://ourworldindata.org/.</p>
     </div>
     <hr>
+
+    <div id = "precautions">
+
+  
+
+        <h2 id = "precautionheader">Remember, whenever you go outside...</h2>
+
+        <ul id = "precautionbullet">
+            <li>Always wear a mask.</li>
+            <li>Practice social distancing at all times.</li>
+            <li>Keep hand sanitizer with you.</li>
+            <li>Wear gloves.</li>
+          </ul>
+
+
+
+      
+    </div>    
+
+    <div class="row">
+        <div class="row">
+            <div class="column">
+              <img src="https://cdn.pixabay.com/photo/2020/04/01/21/05/mask-4992754_960_720.png" alt="image" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="https://cdn.pixabay.com/photo/2020/03/26/22/57/hand-sanitizer-4972049_960_720.png" alt="image" style="width:100%">
+            </div>
+          
+          </div>
+    <hr>
     </body>
     
 <footer id = "footer">
-  <p>Built by Aditi, Ravi, and Jay</p>
+  <p>Built by Aditi, Ravi, Jay, and Guru.</p>
 </footer>
 
 </html>
